@@ -17,7 +17,6 @@ function leerIntento() {
 function intentar() {
   // Leer intento al presionar botón
   const intento = leerIntento();
-  console.log(intento);
   const GRID = document.getElementById("grid");
   const ROW = document.createElement("div");
 
@@ -29,13 +28,13 @@ function intentar() {
 
     if (intento[i] === palabra[i]) {
       SPAN.innerHTML = intento[i];
-      SPAN.style.backgroundColor = "green";
+      SPAN.style.backgroundColor = "#43a047";
     } else if (palabra.includes(intento[i])) {
       SPAN.innerHTML = intento[i];
-      SPAN.style.backgroundColor = "yellow";
+      SPAN.style.backgroundColor = "#d1b036";
     } else {
       SPAN.innerHTML = intento[i];
-      SPAN.style.backgroundColor = "grey";
+      SPAN.style.backgroundColor = "#757575";
     }
 
     ROW.appendChild(SPAN);
@@ -49,7 +48,6 @@ function intentar() {
   }
 
   // Se restan intentos por cada turno, si llega a 0, pierde y envía un mensaje de que perdió a la función terminar
-  console.log(intentos);
   if (intentos === 0) {
     terminar("<h1>PERDISTE!😖</h1>");
   }
