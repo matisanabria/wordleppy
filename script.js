@@ -42,7 +42,7 @@ function intentar() {
     terminar("<h1>PERDISTE!😖</h1>");
   }
 
-
+  // Si el juego termina, deshabilita los input y muestra el mensaje enviado anteriormente
   function terminar(mensaje) {
     const INPUT = document.getElementById("guess-input");
     INPUT.disabled = true;
