@@ -1,5 +1,5 @@
 let intentos = 6;
-let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH']
+let diccionario = ['CASAS', 'PERRO', 'GATOS', 'NIÑOS', 'LIBRO', 'FLORA', 'CIELO', 'SOLAR', 'VOLAR', 'BEBER'];
 const palabra = diccionario[Math.floor(Math.random() * diccionario.length)]
 
 // Obtener elementos del HTML
