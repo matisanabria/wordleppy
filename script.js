@@ -22,6 +22,11 @@ function intentar() {
 
   ROW.className = "row";
 
+  // Si la palabra tiene menos de 5 letras no hace nada
+  if (intento.length < 5) {
+    return;
+  }
+
   for (let i = 0; i < palabra.length; i++) {
     const SPAN = document.createElement("span");
     SPAN.className = "letter";
