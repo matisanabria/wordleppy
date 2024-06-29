@@ -5,10 +5,11 @@ const palabra = diccionario[Math.floor(Math.random() * diccionario.length)]
 // Obtener elementos del HTML
 const button = document.getElementById("guess-button");
 button.addEventListener("click", intentar);
+const inputBox = document.getElementById("guess-input");
 
 // Leer el intento
 function leerIntento() {
-  let intento = document.getElementById("guess-input");
+  let intento = inputBox
   intento = intento.value;
   intento = intento.toUpperCase();
   return intento;
@@ -22,8 +23,10 @@ function intentar() {
 
   ROW.className = "row";
 
-  // Si la palabra tiene menos de 5 letras no hace nada
-  if (intento.length < 5) {
+  // Si la palabra tiene menos de 5 letras no hace nada, si tiene un número tampoco
+  if (intento.length < 5 || /\d/.test(intento)) {
+    inputBox.style.borderColor= 'red'
+    inputBox.style.boxShadow= '0px 2px 14px 0px rgba(245,139,139,1)'
     return;
   }
 
